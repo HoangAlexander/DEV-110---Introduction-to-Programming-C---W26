@@ -224,8 +224,8 @@ jobs:
               comment += `\n### 💡 Next Steps:\n\n`;
               comment += `1. Review the failed tests above\n`;
               comment += `2. Run tests locally to debug:\n`;
+              comment += `   # From the assignment's starter directory\n`;
               comment += `   \`\`\`bash\n`;
-              comment += `   # Frome the assignment's starter directory\n`;
               comment += `   dotnet test ../tests ${{ needs.detect-assignment.outputs.week }}\n`;
               comment += `   \`\`\`\n`;
               comment += `3. Make necessary corrections to your code\n`;
