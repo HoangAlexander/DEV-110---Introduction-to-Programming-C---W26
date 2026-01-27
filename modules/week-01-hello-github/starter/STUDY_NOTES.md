@@ -55,14 +55,14 @@ Answer: dotnet run, runs the actual program
 
 Answer:git add: would be used when adding new updates or files from your computer directory to the staging area.
 
-git commit:
+git commit: confirms changes made to local repository and saves it.
 
-git push:
+git push: uploads your changes to the stage area like github.
 
 **Why do we create branches?**
 [Explain the purpose of creating a student branch]
 
-Answer:
+Answer: Branches make it so you can upload and make changes to your version of the assignment or file without changing the main file.
 
 ## What I Learned
 
