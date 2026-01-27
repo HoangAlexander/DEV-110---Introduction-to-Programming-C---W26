@@ -1,3 +1,16 @@
+/**************************************************************
+* Course: DEV 110
+* Term: Winter 2026
+*
+* Programmer: Alexander Hoang
+* Assignment: Calculator Lite
+*
+* Description:
+* Read the user's name and display it back to them while taking their 2 values and displaying the results for
+* addition, subtraction, multiplication, division, remainder, average, and percentage difference.
+*
+**************************************************************/
+
 namespace CalculatorLite;
 
 public class Program
@@ -6,43 +19,73 @@ public class Program
     {
         Console.WriteLine("=== Calculator Lite ===\n");
 
-        // TODO: Declare variables for storing user input (use descriptive names)
-        // Hint: You'll need variables for two numbers, user name, and calculation choice
+        Console.WriteLine("Before we begin, please enter your name:");
+        string userName = Console.ReadLine();
+        Console.WriteLine($"Hello, {userName}!\n Thank you for using the Calculator Lite today.\n");
 
-        // TODO: Ask for user's name (string) and greet them
-        // Example: "Enter your name: " then "Hello, [name]!"
+        Console.WriteLine("For your calculation would you be using decimal precision? (yes/no):");
+        string decimalChoice = Console.ReadLine().ToLower();
+        bool useDecimals = decimalChoice == "yes";
 
-        // TODO: Ask if they want to use decimals (bool)
-        // Example: "Use decimal precision? (yes/no): "
-        // Store as boolean (true for yes, false for no)
+        double num1, num2;
 
-        // TODO: Prompt user for first number (double or int based on choice)
-        // If decimals: use double.Parse()
-        // If no decimals: use int.Parse() then cast to double
+        if (useDecimals)
+        {
+            Console.WriteLine("Please enter your first number (decimal):");
+            num1 = double.Parse(Console.ReadLine());
 
-        // TODO: Prompt user for second number (same type as first)
+            Console.WriteLine("Please enter your second number (decimal):");
+            num2 = double.Parse(Console.ReadLine());
+        }
 
-        // TODO: Calculate ALL arithmetic operations:
-        // - sum (addition: +)
-        // - difference (subtraction: -)
-        // - product (multiplication: *)
-        // - quotient (division: /)
-        // - remainder (modulus: %)
-        // - average ((num1 + num2) / 2)
+        else
+        {
+            Console.WriteLine("Please enter your first number (whole number):");
+            num1 = (double)int.Parse(Console.ReadLine());
 
-        // TODO: Display results with proper formatting
-        // Show 2 decimal places: {value:F2}
-        // Include descriptive labels for each operation
+            Console.WriteLine("Please enter your second number (whole number):");
+            num2 = (double)int.Parse(Console.ReadLine());
+        }
 
-        // TODO: Check if second number is zero BEFORE dividing
-        // Use if statement: if (num2 == 0) { show error } else { calculate }
+        double sum = num1 + num2;
+        double difference = num1 - num2;
+        double product = num1 * num2;
 
-        // TODO: Count total calculations performed (int)
-        // Display: "Performed [count] calculations for [name]!"
+        Console.WriteLine("\n===============\n");
+        Console.WriteLine($"\nHere are the results for {userName}:");
+        Console.WriteLine("\n===============\n");
+        Console.WriteLine($"Sum: {sum:F2}");
+        Console.WriteLine($"Difference: {difference:F2}");
+        Console.WriteLine($"Product: {product:F2}");
+        if (num2 != 0)
+        {
+            double quotient = num1 / num2;
+            double remainder = num1 % num2;
+            Console.WriteLine($"Quotient: {quotient:F2}");
+            Console.WriteLine($"Remainder: {remainder:F2}");
+        }
 
-        // TODO: Calculate percentage difference
-        // Formula: ((num1 - num2) / num1) * 100
-        // Display with % symbol
+        else
+        {
+            Console.WriteLine("Quotient: Error - Undefined due to dividing by zero!");
+            Console.WriteLine("Remainder: Error - Undefined due to dividing by zero!");
+        }
+
+        double average = (num1 + num2) / 2;
+        Console.WriteLine($"Average: {average:F2}");
+        Console.WriteLine($"\nPerformed 6 calculations for {userName}!");
+        if (num1 != 0)
+        {
+            double percentageDifference = ((num1 - num2) / num1) * 100;
+            Console.WriteLine($"Percentage Difference: {percentageDifference:F2}%");
+        }
+
+        else
+        {
+            Console.WriteLine("Percentage Difference: Error - Undefined due to dividing by zero!");
+        }
+
         Console.WriteLine("\nThank you for using Calculator Lite!");
     }
+
 }

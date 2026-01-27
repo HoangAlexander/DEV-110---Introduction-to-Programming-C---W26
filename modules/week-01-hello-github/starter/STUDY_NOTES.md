@@ -12,81 +12,85 @@ Answer:
 **Operating system:**
 [What OS are you using? Windows, macOS, or Linux?]
 
-Answer:
+Answer: Windows
 
 ## Challenges and Solutions
 
 **Biggest challenge during setup:**
 [What was the hardest part? Installing software, configuring VS Code, understanding the terminal, or something else?]
 
-Answer:
+Answer: The biggest challenge during set up was the terminology when setting up Git and installing the repository onto my computer. 
 
 **How you solved it:**
 [Explain what you did to overcome the challenge - search online, ask for help, restart your computer, etc.]
 
-Answer:
+Answer:Terms such as fork, clone, repo were foreign to me and so I had to do additional research outside such as google and a bit of tutoring from a friend who is also a senior dev.
 
 **Most confusing concept:**
 [What was hardest to understand? Git commands, terminal navigation, C# syntax, or dotnet CLI?]
 
-Answer:
+Answer:I would have to say Git commands were confusing to me as I had no prior git interation.
 
 ## Understanding C# Basics
 
 **What does `Console.WriteLine()` do?**
 [Explain in your own words what this command does]
 
-Answer:
+Answer: It prints a text statement.
 
 **What is the purpose of `Program.cs`?**
 [Why is this file important in a C# project?]
 
-Answer:
+Answer: This is the file name which connects gitHub uses to pull when running related commands to run the program.
 
 **What does `dotnet run` do?**
 [Explain what happens when you run this command]
 
-Answer:
+Answer: dotnet run, runs the actual program
 
 ## Git Workflow Understanding
 
 **What is the difference between `git add`, `git commit`, and `git push`?**
 [Explain each command and when you would use it]
 
-Answer:
+Answer:git add: would be used when adding new updates or files from your computer directory to the staging area.
+
+git commit: confirms changes made to local repository and saves it.
+
+git push: uploads your changes to the stage area like github.
 
 **Why do we create branches?**
 [Explain the purpose of creating a student branch]
 
-Answer:
+Answer: Branches make it so you can upload and make changes to your version of the assignment or file without changing the main file.
 
 ## What I Learned
 
 **Key takeaways from this week:**
 [What are the 3 most important things you learned?]
 
-1.
-2.
-3.
+1. git push
+2. git add
+3. git commit
 
 **How this connects to professional development:**
 [Why are these skills important for programmers?]
 
-Answer:
+Answer: These are important because they are the main commands to make changes within your code and updating them into your stage directory to be graded.
 
 ## Time Spent
 
-**Total time:** [X hours]
+**Total time:** [11 hours and 12 minutes]
 
 **Breakdown:**
 
--   Installing and configuring software: [X hours]
--   Learning terminal/command line basics: [X hours]
--   Writing the "Hello, GitHub!" program: [X hours]
--   Understanding Git workflow: [X hours]
--   Testing and fixing issues: [X hours]
--   Writing documentation: [X hours]
+-   Installing and configuring software: [5 hours]
+-   Learning terminal/command line basics: [10 minutes]
+-   Writing the "Hello, GitHub!" program: [2 minutes]
+-   Understanding Git workflow: [2 hours]
+-   Testing and fixing issues: [2 hours]
+-   Writing documentation: [2 hours]
 
 **Most time-consuming part:** [Which aspect took the longest and why?]
 
-Answer:
+Answer: Installing and configuring softwaretook the longest because I had to familiarize myself with GitHub terminology and how to set it up correctly in a specific drive and folder.

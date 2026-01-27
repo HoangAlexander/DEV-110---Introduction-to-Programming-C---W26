@@ -1,10 +1,23 @@
-namespace HelloGitHub;
+/**************************************************************
+* Course: DEV 110
+* Term: Winter 2026
+*
+* Programmer: Alexander Hoang
+* Assignment: Hello World!
+*
+* Description:
+* This program outputs "Hello, GitHub!" to the console.
+*
+**************************************************************/
 
-public class Program
+namespace HelloGitHub
 {
-    public static void Main(string[] args)
+    public class Program
     {
-        // Done
-        Console.WriteLine("Hello GitHub!");
+        public static void Main(string[] args)
+        {
+            // TODO: Write code that outputs "Hello, GitHub!" to the console
+            Console.WriteLine("Hello, GitHub!");
+        }
     }
 }
