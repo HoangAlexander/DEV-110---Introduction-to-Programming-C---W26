@@ -37,6 +37,7 @@ public class Program
             Console.WriteLine("Please enter your second number (decimal):");
             num2 = double.Parse(Console.ReadLine());
         }
+
         else
         {
             Console.WriteLine("Please enter your first number (whole number):");
@@ -63,11 +64,13 @@ public class Program
             Console.WriteLine($"Quotient: {quotient:F2}");
             Console.WriteLine($"Remainder: {remainder:F2}");
         }
+
         else
         {
             Console.WriteLine("Quotient: Error - Undefined due to dividing by zero!");
             Console.WriteLine("Remainder: Error - Undefined due to dividing by zero!");
         }
+
         double average = (num1 + num2) / 2;
         Console.WriteLine($"Average: {average:F2}");
         Console.WriteLine($"\nPerformed 6 calculations for {userName}!");
@@ -76,10 +79,13 @@ public class Program
             double percentageDifference = ((num1 - num2) / num1) * 100;
             Console.WriteLine($"Percentage Difference: {percentageDifference:F2}%");
         }
+
         else
         {
             Console.WriteLine("Percentage Difference: Error - Undefined due to dividing by zero!");
         }
+
         Console.WriteLine("\nThank you for using Calculator Lite!");
     }
+
 }
