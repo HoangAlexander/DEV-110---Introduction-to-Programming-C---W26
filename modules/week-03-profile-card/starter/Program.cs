@@ -61,7 +61,7 @@ public class Program
 
         Console.WriteLine("Processing your profile card...\n");
         Console.WriteLine("╔════════════════════════════════════════════╗");
-        Console.WriteLine($"║         {fullName}'s STUDENT PROFILE CARD               ║");
+        Console.WriteLine("║         STUDENT PROFILE CARD               ║");
         Console.WriteLine("╚════════════════════════════════════════════╝\n");
 
         Console.WriteLine("PERSONAL INFORMATION");
@@ -85,7 +85,9 @@ public class Program
         Console.WriteLine($"- Years to Graduation: {yearsToGraduation}");
         Console.WriteLine($"- Height: {heightFeet} feet, {heightRemainingInches} inches");
         Console.WriteLine($"- Honor Student: {(isHonorStudent ? "Yes" : "No")}");
+        Console.WriteLine($"- Age: {age} years");
         Console.WriteLine($"- Age in Months: {ageInMonths}\n");
+        Console.WriteLine($"- Favorite Number: {favoriteNumber}");
 
         Console.WriteLine("\n═══════════════════════════════════════════");
         Console.WriteLine("Profile complete! Good luck with your studies!");
