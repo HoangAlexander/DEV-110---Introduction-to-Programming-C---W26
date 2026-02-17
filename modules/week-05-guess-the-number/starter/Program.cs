@@ -22,33 +22,31 @@ public class Program
         Console.WriteLine("To play, guess the secret number by entering a number between the given numbers.");
 
 
-        difficultyLevel:
-        Console.WriteLine("Please select the difficulty level 1-3. (1 = Easy, 2 = Medium, 3 = Hard)");
-        string? difficultyInput = Console.ReadLine();
-        if (difficultyInput == "1")
-        {
-            Console.WriteLine("You have selected Easy mode. I'm thinking a number between 1 and 10, you'll have 3 rounds of numbers to beat.");
-            PlayGame(10, 3);
-        }
+        // Get validated max value (10-100) and number of rounds (1-3)
+        int maxValue = ReadIntInRange("Enter a max value (10-100): ", 10, 100);
+        int rounds = ReadIntInRange("How many rounds? (1-3): ", 1, 3);
 
-        else if (difficultyInput == "2")
-        {
-            Console.WriteLine("You have selected Medium mode. I'm thinking a number between 1 and 50, you'll have 2 rounds of numbers to beat.");
-            PlayGame(50, 2);
-        }
+        PlayGame(maxValue, rounds);
 
-        else if (difficultyInput == "3")
-        {
-            Console.WriteLine("You have selected Hard mode. I'm thinking a number between 1 and 100, you'll have 1 round of numbers to beat.");
-            PlayGame(100, 1);
-        }
+    }
 
-        else
+    private static int ReadIntInRange(string prompt, int min, int max)
+    {
+        int value = 0;
+        bool isValid;
+        do
         {
-            Console.WriteLine("Invalid input. Please enter a number between 1 and 3.");
-            goto difficultyLevel;
-        }
+            Console.Write(prompt);
+            string? input = Console.ReadLine();
+            isValid = int.TryParse(input, out value) && value >= min && value <= max;
+            if (!isValid)
+            {
+                Console.WriteLine($"Invalid input. Please enter a number between {min} and {max}.");
+            }
 
+        } while (!isValid);
+
+        return value;
     }
 
     private static void PlayGame(int maxValue, int rounds)
@@ -68,6 +66,12 @@ public class Program
                 Console.Write($"Guess a number between 1 and {maxValue}: ");
                 string? guessInput = Console.ReadLine();
 
+                if (guessInput == null)
+                {
+                    // no more input (e.g. tests exhausted stdin) - stop the game
+                    return;
+                }
+
                 if (!int.TryParse(guessInput, out guess))
                 {
                     Console.WriteLine("Invalid input. Please enter a valid number.");
@@ -80,10 +84,12 @@ public class Program
                 {
                     Console.WriteLine("Too low.");
                 }
+
                 else if (guess > secretNumber)
                 {
                     Console.WriteLine("Too high.");
                 }
+
                 else
                 {
                     Console.WriteLine($"Correct! You got it in {guessCount} guesses.");
@@ -103,19 +109,28 @@ public class Program
             validInput = true;
             Console.WriteLine("Thanks for playing! Would you like to play again? (y/n)");
             string? playAgainInput = Console.ReadLine();
+            if (playAgainInput == null)
+            {
+                Console.WriteLine("Goodbye!");
+                return;
+            }
+
             if (playAgainInput == "y" || playAgainInput == "Y")
             {
                 goto playAgainLoop;
             }
+
             else if (playAgainInput == "n" || playAgainInput == "N")
             {
                 Console.WriteLine("Goodbye!");
             }
+
             else
             {
                 Console.WriteLine("Invalid input. Please enter 'y' or 'n'.");
                 validInput = false;
             }
+
         } while (!validInput);
 
     }

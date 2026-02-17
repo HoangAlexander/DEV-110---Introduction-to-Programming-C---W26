@@ -99,7 +99,7 @@ Answer: While Loops were the most naturaly because of terms of familiarity and t
 
 ## Time Spent
 
-**Total time:** [8 hours]
+**Total time:** 8 hours
 
 **Breakdown:**
 
