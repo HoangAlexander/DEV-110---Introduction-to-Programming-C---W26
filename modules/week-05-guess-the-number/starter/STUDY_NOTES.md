@@ -99,7 +99,12 @@ Answer:
 
 ## Time Spent
 
-**Total time:** [X hours]
+<<<<<<< HEAD
+**Total time:** 8 hours
+=======
+**Total time:** [8 hours]
+
+> > > > > > > d08cc3f (Complete Week5: Guess the Number)
 
 **Breakdown:**
 
